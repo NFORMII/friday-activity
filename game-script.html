@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company 7x - Friday Activity Game Scripts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .accordion {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: linear-gradient(135deg, #5a6fd6 0%, #6a4192 100%);
+        }
+
+        .accordion-header h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .accordion-icon {
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion.active .accordion-content {
+            max-height: 2000px;
+        }
+
+        .accordion-body {
+            padding: 25px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+            display: inline-block;
+        }
+
+        .script-content {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .activity-list {
+            background: #f0f4ff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .activity-list ol {
+            margin-left: 20px;
+        }
+
+        .activity-list li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .time-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-left: 10px;
+            font-weight: 500;
+        }
+
+        .instructions {
+            background: #fff3cd;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+        }
+
+        .instructions strong {
+            color: #856404;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .accordion-header {
+                padding: 15px 18px;
+            }
+            
+            .accordion-header h2 {
+                font-size: 1em;
+            }
+            
+            .accordion-body {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Company 7x</h1>
+        <p class="subtitle">Friday Social Activity Game Scripts - 30 Minutes Each</p>
+
+        <!-- Activity 1 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 1: The "Who is Most Likely To..." Showdown</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Alright team, welcome to the Friday Social! We spend all week together in meetings and Slack threads, so let's see how well we actually know each other. I am going to read a prompt. On the count of three, point at the person in the room who fits the description best. The winner has 15 seconds to defend themselves. Ready?"
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity - Prompts</div>
+                        <div class="activity-list">
+                            <ol>
+                                <li>...survive a zombie apocalypse using only office supplies?</li>
+                                <li>...accidentally 'Reply All' to a company-wide email?</li>
+                                <li>...drink five cups of coffee before noon?</li>
+                                <li>...have the most unread emails in their inbox right now?</li>
+                                <li>...bring the absolute best snacks on a road trip?</li>
+                                <li>...win a reality TV show?</li>
+                                <li>...become a professional stand-up comedian?</li>
+                                <li>...secretly be a superhero in their spare time?</li>
+                                <li>...start a side hustle that makes a million dollars?</li>
+                                <li>...know all the latest office gossip?</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 2 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 2: Company 7x Trivia</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Welcome to Friday Trivia! Today we are testing who actually pays attention during our All-Hands meetings. Get into teams of 3 or 4. I will read a question, and your team has 30 seconds to quietly write down your answer. No googling! We will swap papers and grade them at the end."
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity - Questions</div>
+                        <div class="activity-list">
+                            <ol>
+                                <li>What was the original name of the company before it was Company 7x?</li>
+                                <li>What year did our CEO officially become CEO?</li>
+                                <li>How many microwaves do we have in the building?</li>
+                                <li>Who was the very first employee ever hired here?</li>
+                                <li>How many different departments make up the Company 7x family?</li>
+                                <li>What is the exact wording of our company mission statement?</li>
+                                <li>What color is the carpet in the main conference room?</li>
+                                <li>What is the exact title of the employee handbook?</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 3: Two Truths and a Lie (First Job Edition)</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Today we are playing Two Truths and a Lie, but with a twist! I want everyone to think of three facts about your very first job or childhood hustles. Two must be completely true, and one must be a lie. The rest of the room gets to cross-examine you and vote on which statement is the fake one. Who wants to go first?"
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity Instructions</div>
+                        <div class="activity-list">
+                            <p>Each participant takes turns sharing their three statements. The group votes on which statement they believe is the lie. Encourage creative and surprising stories from early careers or childhood jobs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 4 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 4: Office Charades</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Let's play Office Charades! I'm splitting the room into two teams. One person will come up, read a card with a common office phrase on it, and you have 60 seconds to act it out without making a single sound. And yes, that includes frustrated sighing."
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity - Phrases</div>
+                        <div class="activity-list">
+                            <ol>
+                                <li>'You're on mute!'</li>
+                                <li>'Paper jam in the printer'</li>
+                                <li>'Spilling coffee on your keyboard'</li>
+                                <li>'Trying to stay awake after lunch'</li>
+                                <li>'Sneaking out early on a Friday'</li>
+                                <li>'Forgetting your computer password'</li>
+                                <li>'Awkward silence on a Zoom call'</li>
+                                <li>'Finding free food in the breakroom'</li>
+                                <li>'The Wi-Fi is down'</li>
+                                <li>'A meeting that could have been an email'</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 5 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 5: Shark Tank: Useless Inventions</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Welcome to Shark Tank! Grab a partner. You have 3 minutes to brainstorm a pitch for an absolutely terrible, useless product based on the prompts I give you. Then, you have 60 seconds to pitch it to us—the investors. We will vote on the best terrible pitch."
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity - Prompts</div>
+                        <div class="activity-list">
+                            <ol>
+                                <li>A coffee mug that screams when it is empty.</li>
+                                <li>A blanket that gets colder instead of warmer.</li>
+                                <li>A keyboard that shuffles the letters every hour.</li>
+                                <li>An umbrella that dissolves in the rain.</li>
+                                <li>A pen that only writes in invisible ink that never appears.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 6 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 6: The Item Rearrangement Contest</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Gather around this table! You have exactly 60 seconds to memorize the layout of these items. After 60 seconds, everyone turns their back. I am going to move a few things around, take something away, and add something new. The first team to correctly identify every single change wins!"
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity Instructions</div>
+                        <div class="activity-list">
+                            <p>Prepare a table with 10-15 office items (stapler, tape, paper clips, sticky notes, etc.). Give teams 60 seconds to memorize. Then make 3-5 changes while they're not looking. First team to identify all changes wins.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 7 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 7: Blindfolded Bottle Drop</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Time for the Blindfolded Bottle Drop! Split into teams of two. One of you will put on a blindfold and hold this bottle. The other person must stay on the sidelines and use ONLY their voice to guide their partner across the room to drop the bottle perfectly into the target box. The fastest time wins!"
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity Instructions</div>
+                        <div class="activity-list">
+                            <p>Set up a target box at one end of the room. Teams of two take turns - one blindfolded holding a water bottle, the other guiding verbally. Measure distance from target box. Closest drop wins.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 8 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 8: The Mystery Swap</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Thank you all for bringing in your wrapped items! I have them all mixed up in this box. We are going to go around the room, draw an item blindly, and unwrap it. Then, the room has to deliberate and guess who brought it based purely on the vibes of the item!"
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity Instructions</div>
+                        <div class="activity-list">
+                            <p>Ask participants to bring a wrapped small gift/item beforehand. Place all items in a box. Go around the room - each person draws and unwraps an item. The group guesses who brought it. Reveal after voting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 9 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 9: The "Forbidden Letter" Interrogation</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "We are playing the Forbidden Letter game. I will ask you a rapid-fire question. You CANNOT use any words that contain the forbidden letter of the round. If you hesitate too long or use the letter, you are out! Round 1 letter is E."
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity - Rounds</div>
+                        <div class="activity-list">
+                            <p><strong>Round 1 (Letter E):</strong> What is your favorite thing about working here? / Describe your breakfast.</p>
+                            <p><strong>Round 2 (Letter A):</strong> What is your favorite movie? / How do you commute?</p>
+                            <p><strong>Round 3 (Letter S):</strong> What is your dream vacation? / If you had a superpower, what would it be?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 10 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 10: Desk Olympics</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Welcome to the first-ever Company 7x Desk Olympics! We have three events today. First up, the Paperclip Toss—how many can you flick into the coffee mug in 30 seconds? Second, the Sticky-Note Long Jump. Third, the Pen Spin endurance challenge. Let the games begin!"
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity - Events</div>
+                        <div class="activity-list">
+                            <ol>
+                                <li><strong>Paperclip Toss:</strong> Flick paperclips into a mug from a set distance. Most in 30 seconds wins.</li>
+                                <li><strong>Sticky-Note Long Jump:</strong> Flick a sticky note as far as possible across the room.</li>
+                                <li><strong>Pen Spin Endurance:</strong> Spin a pen on your finger - longest spin wins.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 11 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 11: Bracket Battle</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Today we are settling some serious debates with a Bracket Battle! I have a bracket of 8 items on the board. We are going to vote round-by-round to crown the ultimate champion. First up: What is the superior office snack, chips or chocolate?"
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity Instructions</div>
+                        <div class="activity-list">
+                            <p>Prepare a bracket with 8 office-related items (snacks, drinks, work-from-home vs office, etc.). Vote head-to-head each round until a winner is crowned. Great for sparking friendly debates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 12 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 12: Rate My Setup</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Pull out your phones! We are playing Rate My Setup. I want everyone to find one photo on their phone—it can be your home desk, a funny picture of your pet, or a weird thing you saw on your commute. We will go around the room, you show the photo, and you get 60 seconds to explain the backstory."
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity Instructions</div>
+                        <div class="activity-list">
+                            <p>Each participant shares one photo from their phone and has 60 seconds to explain the story behind it. Can be workspace, pet, travel, or anything interesting. Group can ask follow-up questions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 13 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 13: The Shoutout Wall</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Today we are slowing it down and showing some appreciation. Everyone grab a stack of sticky notes. Take the next 15 minutes to write down compliments, thank-yous, or funny memories about your coworkers. You can sign them or leave them anonymous. We are going to stick them all on this whiteboard to build a Shoutout Wall for the week!"
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity Instructions</div>
+                        <div class="activity-list">
+                            <p>Provide sticky notes and markers. Give participants 15 minutes to write appreciation notes for colleagues. Can be signed or anonymous. Stick all notes on a whiteboard or wall to create the Shoutout Wall.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity 14 - REMOVED per user request -->
+
+        <!-- Activity 15 -->
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Activity 14: The Board Game Lounge</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-body">
+                    <div class="section">
+                        <div class="section-title">Host Script</div>
+                        <div class="script-content">
+                            "Today is a chill day! We've got the Board Game Lounge set up. There are a few different stations with games like Uno, Jenga, and Monopoly. Pick a table, grab some snacks, and let's just relax and play some games to kick off the weekend."
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Activity Instructions</div>
+                        <div class="activity-list">
+                            <p>Set up 3-4 game stations with different board/card games (Uno, Jenga, Monopoly, etc.). Provide snacks and drinks. Participants freely rotate between stations. Casual and relaxed atmosphere to end the session.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const accordion = header.parentElement;
+                const isActive = accordion.classList.contains('active');
+                
+                // Close all accordions
+                document.querySelectorAll('.accordion').forEach(acc => {
+                    acc.classList.remove('active');
+                });
+                
+                // Toggle current accordion
+                if (!isActive) {
+                    accordion.classList.add('active');
+                }
+            });
+        });
+
+        // Open first accordion by default
+        document.querySelector('.accordion').classList.add('active');
+    </script>
+</body>
+</html>
