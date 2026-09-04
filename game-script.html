@@ -78,13 +78,11 @@
         }
 
         .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
+            display: none;
         }
 
         .accordion.active .accordion-content {
-            max-height: 3000px;
+            display: block;
         }
 
         .accordion-body {
@@ -654,9 +652,6 @@
                 const accordion = header.parentElement;
                 const isActive = accordion.classList.contains('active');
                 
-                // Store current scroll position
-                const scrollPos = window.scrollY;
-                
                 // Close all accordions
                 document.querySelectorAll('.accordion').forEach(acc => {
                     acc.classList.remove('active');
@@ -667,11 +662,9 @@
                     accordion.classList.add('active');
                 }
                 
-                // Restore scroll position immediately
-                window.scrollTo(0, scrollPos);
-                
-                // Remove focus to prevent iOS scroll
+                // Remove focus to prevent iOS auto-scroll
                 header.blur();
+                document.activeElement.blur();
             });
         });
 
