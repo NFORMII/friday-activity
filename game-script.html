@@ -660,10 +660,8 @@
                 // Toggle current accordion
                 if (!isActive) {
                     accordion.classList.add('active');
-                    // Wait for expansion then scroll to top
-                    setTimeout(() => {
-                        accordion.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 350);
+                    // Instant scroll to top - no animation
+                    accordion.scrollIntoView({ block: 'start' });
                 }
             });
         });
