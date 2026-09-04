@@ -652,17 +652,14 @@
                 const accordion = header.parentElement;
                 const isActive = accordion.classList.contains('active');
                 
-                // Close all accordions first
+                // Close all accordions
                 document.querySelectorAll('.accordion').forEach(acc => {
                     acc.classList.remove('active');
                 });
                 
-                // Wait for layout to settle, then open and scroll
+                // Toggle current accordion
                 if (!isActive) {
-                    setTimeout(() => {
-                        accordion.classList.add('active');
-                        accordion.scrollIntoView({ block: 'start' });
-                    }, 50);
+                    accordion.classList.add('active');
                 }
             });
         });
