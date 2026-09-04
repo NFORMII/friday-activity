@@ -9,6 +9,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: auto;
+        }
+
+        html {
+            scroll-behavior: auto;
+            overflow-anchor: none;
         }
 
         body {
@@ -79,6 +85,7 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
+            scroll-margin-top: 10px;
         }
 
         .accordion.active .accordion-content {
@@ -648,7 +655,8 @@
 
     <script>
         document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
+            header.addEventListener('click', (e) => {
+                e.preventDefault();
                 const accordion = header.parentElement;
                 const isActive = accordion.classList.contains('active');
                 
