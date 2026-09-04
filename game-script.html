@@ -82,7 +82,7 @@
         }
 
         .accordion.active .accordion-content {
-            max-height: 2000px;
+            max-height: 3000px;
         }
 
         .accordion-body {
@@ -660,6 +660,16 @@
                 // Toggle current accordion
                 if (!isActive) {
                     accordion.classList.add('active');
+                    // Scroll to top of this accordion
+                    setTimeout(() => {
+                        const rect = accordion.getBoundingClientRect();
+                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        const offsetTop = rect.top + scrollTop - 10;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
                 }
             });
         });
